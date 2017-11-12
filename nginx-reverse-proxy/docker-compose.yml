@@ -2,10 +2,12 @@ version: '3'
 services:
   node-be:
     build: node-backend
-    ports:
-    - "3000:3000"
     environment:
      - SERVER_NAME=A
+  node2-be:
+    build: node-backend
+    environment:
+     - SERVER_NAME=B
   nginx-fe:
     build: nginx-frontend
     ports:
