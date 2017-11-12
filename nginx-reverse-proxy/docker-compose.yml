@@ -1,6 +1,6 @@
 version: '3'
 services:
-  node-be:
+  node1-be:
     build: node-backend
     environment:
      - SERVER_NAME=A
@@ -8,6 +8,8 @@ services:
     build: node-backend
     environment:
      - SERVER_NAME=B
+  node-web:
+    build: node-web
   nginx-fe:
     build: nginx-frontend
     ports:
