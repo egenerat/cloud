@@ -4,6 +4,8 @@ services:
     build: node-backend
     ports:
     - "3000:3000"
+    environment:
+     - SERVER_NAME=A
   nginx-fe:
     build: nginx-frontend
     ports:
