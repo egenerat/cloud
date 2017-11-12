@@ -1,6 +1,10 @@
 version: '3'
 services:
-  web:
+  node-be:
     build: node-backend
     ports:
     - "3000:3000"
+  nginx-fe:
+    build: nginx-frontend
+    ports:
+    - "80:80"
