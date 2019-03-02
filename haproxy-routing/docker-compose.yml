@@ -1,0 +1,10 @@
+version: '3'
+services:
+  go-api:
+    build: go-api
+  go-web:
+    build: go-web
+  haproxy-fe:
+    build: haproxy
+    ports:
+    - "80:80"
