@@ -1,17 +1,17 @@
 package main
 
 import (
-	"fmt"
-	"log"
-	"net/http"
+    "fmt"
+    "log"
+    "net/http"
 )
 
 func handlerApi(w http.ResponseWriter, r *http.Request) {
-	w.Header().Set("Content-Type", "application/json")
-	fmt.Fprintf(w, `{"message": "Hello world"}`)
+    w.Header().Set("Content-Type", "application/json")
+    fmt.Fprintf(w, `{"message": "Hello world"}`)
 }
 
 func main() {
-	http.HandleFunc("/api", handlerApi)
+    http.HandleFunc("/", handlerApi)
     log.Fatal(http.ListenAndServe(":8080", nil))
 }
