@@ -1,0 +1,12 @@
+version: '3'
+services:
+  node-web-v1:
+    build: node-web-v1
+  node-web-v2:
+    build: node-web-v2
+  node-other-app:
+    build: node-other-app
+  nginx-fe:
+    build: nginx-frontend
+    ports:
+    - "80:80"
