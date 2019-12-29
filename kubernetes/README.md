@@ -15,3 +15,12 @@ minikube start
 ```
 sudo pacman -Syyu kubectl minikube
 ```
+
+## Create objects
+
+```
+kubectl apply -f <file or URL>
+```
+
+## Web UI (dashboard)
+https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/
