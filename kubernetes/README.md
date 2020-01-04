@@ -2,13 +2,11 @@
 
 k8s
 
-## Install on local machine
-Minikube https://kubernetes.io/docs/setup/minikube/
-microk8s (via snapd) https://microk8s.io/
+Documentation: https://kubernetes.io/
 
-```
-minikube start
-```
+## Install on local machine
+- Minikube https://kubernetes.io/docs/setup/minikube/
+- or MicroK8s (via snapd) https://microk8s.io/
 
 ### Manjaro
 
@@ -16,11 +14,30 @@ minikube start
 sudo pacman -Syyu kubectl minikube
 ```
 
+Then
+```
+minikube start
+```
+
+## Web UI (dashboard)
+https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/
+
+
 ## Create objects
 
 ```
 kubectl apply -f <file or URL>
 ```
 
-## Web UI (dashboard)
-https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/
+
+## Run commands inside of a running container
+
+If the pod contains only one container
+```
+kubectl exec -it <pod name> -- /bin/bash
+```
+
+Else, specify the container name too
+```
+kubectl exec -it <pod name> --container <container name> -- /bin/bash
+```
