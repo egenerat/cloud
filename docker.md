@@ -13,3 +13,9 @@ docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
 ## New way:
 https://docs.docker.com/engine/reference/commandline/image_prune/
 API 1.25+
+
+# Issues and solutions
+
+Issue | Solution
+--- | ---
+`bash: ps: command not found` | `RUN apt-get update && apt-get install -y procps`
