@@ -22,6 +22,11 @@ minikube start
 ## Web UI (dashboard)
 https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/
 
+or
+
+```
+minikube dashboard
+```
 
 ## Create objects
 
