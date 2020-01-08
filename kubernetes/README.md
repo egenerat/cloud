@@ -8,6 +8,9 @@ Documentation: https://kubernetes.io/
 - Minikube https://kubernetes.io/docs/setup/minikube/
 - or MicroK8s (via snapd) https://microk8s.io/
 
+Equivalent for OpenShift:
+- Minishift https://docs.okd.io/latest/minishift/getting-started/index.html
+
 ### Manjaro
 
 ```
