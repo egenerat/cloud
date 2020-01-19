@@ -49,3 +49,15 @@ Else, specify the container name too
 ```
 kubectl exec -it <pod name> --container <container name> -- /bin/bash
 ```
+
+## Debug
+
+To connect to the Minikube VM
+```
+minikube ssh
+```
+
+To interact with the Minikube's docker daemon from the docker CLI on the host machine
+```
+eval $(minikube docker-env)
+```
