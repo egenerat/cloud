@@ -1,7 +1,7 @@
 ## Cleanup for old docker versions
 ### Clean all the exited containers
 ```
-docker ps --filter "status=exited" |awk '{print $1}' | xargs --no-run-if-empty docker rm
+docker ps --filter "status=exited" |awk '{print $1}' | grep -v CONTAINER | xargs --no-run-if-empty docker rm
 ```
 Filter with `months ago` if needed to keep the most recent ones
 
